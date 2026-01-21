@@ -1,0 +1,86 @@
+.shop-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem;
+}
+
+.shop-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.construction-icon {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  animation: bounce 2s infinite;
+}
+
+.shop-content h1 {
+  font-size: 3rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.shop-content p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.coming-soon {
+  font-size: 1.5rem;
+  color: #0066cc;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+
+.contact-alternative {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.contact-alternative p {
+  margin-bottom: 1.5rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #004d99;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-content h1 {
+    font-size: 2rem;
+  }
+  
+  .construction-icon {
+    font-size: 4rem;
+  }
+}
