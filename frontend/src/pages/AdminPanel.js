@@ -28,6 +28,22 @@ const AdminPanel = () => {
     setSelectedEntry(null);
   };
 
+  const handleProductManagement = () => {
+    navigate('/product-management');
+  };
+
+  const handleGalleryManagement = () => {
+    navigate('/gallery-management');
+  };
+
+  const handleEmployeeManagement = () => {
+    navigate('/employee-management');
+  };
+
+  const handleSettingsManagement = () => {
+    navigate('/settings-management');
+  };
+
   const exportToExcel = () => {
     const approvedEntries = entries.filter(e => e.status === 'approved');
     const worksheet = XLSX.utils.json_to_sheet(approvedEntries);
@@ -174,22 +190,22 @@ const AdminPanel = () => {
                   <div className="content-card">
                     <h4>Products</h4>
                     <p>Manage product listings and information</p>
-                    <button className="content-btn" data-testid="manage-products-btn">Manage Products</button>
+                    <button className="content-btn" onClick={handleProductManagement} data-testid="manage-products-btn">Manage Products</button>
                   </div>
                   <div className="content-card">
                     <h4>Gallery</h4>
                     <p>Update gallery images and captions</p>
-                    <button className="content-btn" data-testid="manage-gallery-btn">Manage Gallery</button>
+                    <button className="content-btn" onClick={handleGalleryManagement} data-testid="manage-gallery-btn">Manage Gallery</button>
                   </div>
                   <div className="content-card">
                     <h4>Employees</h4>
                     <p>Manage employee accounts and targets</p>
-                    <button className="content-btn" data-testid="manage-employees-btn">Manage Employees</button>
+                    <button className="content-btn" onClick={handleEmployeeManagement} data-testid="manage-employees-btn">Manage Employees</button>
                   </div>
                   <div className="content-card">
                     <h4>Settings</h4>
                     <p>Configure site settings and preferences</p>
-                    <button className="content-btn" data-testid="site-settings-btn">Site Settings</button>
+                    <button className="content-btn" onClick={handleSettingsManagement} data-testid="site-settings-btn">Site Settings</button>
                   </div>
                 </div>
               </div>

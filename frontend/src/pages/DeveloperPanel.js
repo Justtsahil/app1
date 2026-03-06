@@ -13,6 +13,26 @@ const DeveloperPanel = () => {
     }
   }, [user, navigate]);
 
+  const handleManageAdmins = () => {
+    navigate('/admin-management');
+  };
+
+  const handlePermissions = () => {
+    navigate('/permission-control');
+  };
+
+  const handlePages = () => {
+    navigate('/page-management');
+  };
+
+  const handleDataAccess = () => {
+    navigate('/data-access');
+  };
+
+  const handleExportSystem = () => {
+    navigate('/export-system');
+  };
+
   if (!user || user.role !== 'developer') {
     return null;
   }
@@ -35,21 +55,21 @@ const DeveloperPanel = () => {
             <div className="feature-icon">👥</div>
             <h3>Admin Management</h3>
             <p>Create, modify, and delete admin accounts</p>
-            <button className="feature-btn" data-testid="manage-admins-btn">Manage Admins</button>
+            <button className="feature-btn" onClick={handleManageAdmins} data-testid="manage-admins-btn">Manage Admins</button>
           </div>
 
           <div className="feature-card">
             <div className="feature-icon">🔐</div>
             <h3>Permissions Control</h3>
             <p>Configure access levels and permissions for all users</p>
-            <button className="feature-btn" data-testid="manage-permissions-btn">Manage Permissions</button>
+            <button className="feature-btn" onClick={handlePermissions} data-testid="manage-permissions-btn">Manage Permissions</button>
           </div>
 
           <div className="feature-card">
             <div className="feature-icon">📄</div>
             <h3>Page Management</h3>
             <p>Enable/disable pages and control visibility</p>
-            <button className="feature-btn" data-testid="manage-pages-btn">Manage Pages</button>
+            <button className="feature-btn" onClick={handlePages} data-testid="manage-pages-btn">Manage Pages</button>
           </div>
 
           <div className="feature-card">
@@ -63,14 +83,14 @@ const DeveloperPanel = () => {
             <div className="feature-icon">📊</div>
             <h3>Data Access</h3>
             <p>Full access to all system data and analytics</p>
-            <button className="feature-btn" data-testid="data-access-btn">View Data</button>
+            <button className="feature-btn" onClick={handleDataAccess} data-testid="data-access-btn">View Data</button>
           </div>
 
           <div className="feature-card">
             <div className="feature-icon">📤</div>
             <h3>Export System</h3>
             <p>Export comprehensive system reports and data</p>
-            <button className="feature-btn" data-testid="export-system-btn">Export Data</button>
+            <button className="feature-btn" onClick={handleExportSystem} data-testid="export-system-btn">Export Data</button>
           </div>
         </div>
 
